@@ -242,7 +242,7 @@ window.onload = function () {
             yValueFormatString: "$####.00",
             xValueFormatString: "hh:mm:ss TT",
             showInLegend: true,
-            name: "Exchange A",
+            name: "Coinbase USD Exchange",
             dataPoints: dataPoints1
         },
             {
@@ -250,7 +250,7 @@ window.onload = function () {
                 xValueType: "dateTime",
                 yValueFormatString: "$####.00",
                 showInLegend: true,
-                name: "Exchange B" ,
+                name: "BTC-E USD Exchange" ,
                 dataPoints: dataPoints2
             }]
     });
@@ -312,14 +312,14 @@ window.onload = function () {
             if(diff1 > diff2)
             {
                 console.log("2222");
-                profit_div.innerHTML = "B";
+                profit_div.innerHTML = "BTC-E USD Exchange";
                 profit_div.style.color="red";
 
             }
             else
             {
                 console.log("11111");
-                profit_div.innerHTML = "A";
+                profit_div.innerHTML = "Coinbase USD Exchange";
                 profit_div.style.color="blue";
 
             }
@@ -377,8 +377,8 @@ window.onload = function () {
         }
 
         // updating legend text with  updated with y Value
-        chart.options.data[0].legendText = " Exchange A  $" + yValue1;
-        chart.options.data[1].legendText = " Exchange B  $" + yValue2;
+        chart.options.data[0].legendText = " Coinbase USD Exchange $" + yValue1;
+        chart.options.data[1].legendText = " BTC-E USD Exchange $" + yValue2;
         chart.render();
     }
 // generates first set of dataPoints
